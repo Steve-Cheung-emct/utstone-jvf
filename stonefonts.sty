@@ -1,0 +1,330 @@
+﻿% stonefonts.sty by SteveCheung 2019/01/10
+% Copyright (C) 2019 by SteveCheung, All rights reserved.
+%
+%  縦書自定字體設定
+%
+%  作成者: 子康    dongfang0571@gmail.com
+%
+%  用作石頭記.tex
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\RequirePackage{type1cm} %字體
+\RequirePackage[uplatex,deluxe,expert,jis2004]{otf} %字體包
+\RequirePackage[usenames]{color}
+\RequirePackage[usenames,dvipsnames]{xcolor}
+\RequirePackage{plext}       %   縱組顓用增强包
+\RequirePackage{plautopatch} %   為 pLaTeX 打補丁
+\RequirePackage{fix-cm}
+\ProvidesPackage{stonefonts}[2024/05/08 v1.0a SteveCheung]
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% 罗马字
+\usepackage{txfonts}
+
+%% フォント關連
+\usepackage[T1]{fontenc}            % 西文字母T1
+\usepackage[utf8]{inputenc}         % UTF8輸入
+
+% 使用八登崇之的脚本
+\usepackage{pxbase}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% 自定義的字體 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% mincho light; 明朝体，細
+\DeclareFontFamily{JY2}{utmc}{}
+\DeclareFontFamily{JT2}{utmc}{}
+
+\DeclareFontShape{JY2}{utmc}{l}{n}{<->s*[0.924690]upml-apr}{}
+\DeclareFontShape{JY2}{utmc}{l}{it}{<->ssub*utmc/l/n}{}
+\DeclareFontShape{JY2}{utmc}{l}{sl}{<->ssub*utmc/l/n}{}
+\DeclareFontShape{JY2}{utmc}{l}{sc}{<->ssub*utmc/l/n}{}
+\DeclareFontShape{JT2}{utmc}{l}{n}{<->s*[0.924690]utml-apr}{}
+\DeclareFontShape{JT2}{utmc}{l}{it}{<->ssub*utmc/l/n}{}
+\DeclareFontShape{JT2}{utmc}{l}{sl}{<->ssub*utmc/l/n}{}
+\DeclareFontShape{JT2}{utmc}{l}{sc}{<->ssub*utmc/l/n}{}
+
+\DeclareFontShape{JY2}{utmc}{m}{n}{<->s*[0.924690]upmr-apr}{}
+\DeclareFontShape{JY2}{utmc}{m}{it}{<->ssub*utmc/m/n}{}
+\DeclareFontShape{JY2}{utmc}{m}{sl}{<->ssub*utmc/m/n}{}
+\DeclareFontShape{JY2}{utmc}{m}{sc}{<->ssub*utmc/m/n}{}
+\DeclareFontShape{JT2}{utmc}{m}{n}{<->s*[0.924690]utmr-apr}{}
+\DeclareFontShape{JT2}{utmc}{m}{it}{<->ssub*utmc/m/n}{}
+\DeclareFontShape{JT2}{utmc}{m}{sl}{<->ssub*utmc/m/n}{}
+\DeclareFontShape{JT2}{utmc}{m}{sc}{<->ssub*utmc/m/n}{}
+
+\DeclareFontShape{JY2}{utmc}{bx}{n}{<->s*[0.924690]upmb-apr}{}
+\DeclareFontShape{JY2}{utmc}{bx}{it}{<->ssub*utmc/bx/n}{}
+\DeclareFontShape{JY2}{utmc}{bx}{sl}{<->ssub*utmc/bx/n}{}
+\DeclareFontShape{JY2}{utmc}{bx}{sc}{<->ssub*utmc/bx/n}{}
+\DeclareFontShape{JT2}{utmc}{bx}{n}{<->s*[0.924690]utmb-apr}{}
+\DeclareFontShape{JT2}{utmc}{bx}{it}{<->ssub*utmc/bx/n}{}
+\DeclareFontShape{JT2}{utmc}{bx}{sl}{<->ssub*utmc/bx/n}{}
+\DeclareFontShape{JT2}{utmc}{bx}{sc}{<->ssub*utmc/bx/n}{}
+
+% gothic regular; 黑体，常規
+\DeclareFontFamily{JY2}{utgt}{}
+\DeclareFontFamily{JT2}{utgt}{}
+
+\DeclareFontShape{JY2}{utgt}{m}{n}{<->s*[0.924690]upgr-apr}{}
+\DeclareFontShape{JY2}{utgt}{m}{it}{<->ssub*utgt/m/n}{}
+\DeclareFontShape{JY2}{utgt}{m}{sl}{<->ssub*utgt/m/n}{}
+\DeclareFontShape{JY2}{utgt}{m}{sc}{<->ssub*utgt/m/n}{}
+\DeclareFontShape{JY2}{utgt}{l}{n}{<->ssub*utgt/m/n}{}
+\DeclareFontShape{JT2}{utgt}{m}{n}{<->s*[0.924690]utgr-apr}{}
+\DeclareFontShape{JT2}{utgt}{m}{it}{<->ssub*utgt/m/n}{}
+\DeclareFontShape{JT2}{utgt}{m}{sl}{<->ssub*utgt/m/n}{}
+\DeclareFontShape{JT2}{utgt}{m}{sc}{<->ssub*utgt/m/n}{}
+\DeclareFontShape{JT2}{utgt}{l}{n}{<->ssub*utgt/m/n}{}
+
+\DeclareFontShape{JY2}{utgt}{bx}{n}{<->s*[0.924690]upgb-apr}{}
+\DeclareFontShape{JY2}{utgt}{bx}{it}{<->ssub*utgt/bx/n}{}
+\DeclareFontShape{JY2}{utgt}{bx}{sl}{<->ssub*utgt/bx/n}{}
+\DeclareFontShape{JY2}{utgt}{bx}{sc}{<->ssub*utgt/bx/n}{}
+\DeclareFontShape{JT2}{utgt}{bx}{n}{<->s*[0.924690]utgb-apr}{}
+\DeclareFontShape{JT2}{utgt}{bx}{it}{<->ssub*utgt/bx/n}{}
+\DeclareFontShape{JT2}{utgt}{bx}{sl}{<->ssub*utgt/bx/n}{}
+\DeclareFontShape{JT2}{utgt}{bx}{sc}{<->ssub*utgt/bx/n}{}
+
+\DeclareFontShape{JY2}{utgt}{eb}{n}{<->s*[0.924690]upge-apr}{}
+\DeclareFontShape{JY2}{utgt}{eb}{it}{<->ssub*utgt/eb/n}{}
+\DeclareFontShape{JY2}{utgt}{eb}{sl}{<->ssub*utgt/eb/n}{}
+\DeclareFontShape{JY2}{utgt}{eb}{sc}{<->ssub*utgt/eb/n}{}
+\DeclareFontShape{JT2}{utgt}{eb}{n}{<->s*[0.924690]utge-apr}{}
+\DeclareFontShape{JT2}{utgt}{eb}{it}{<->ssub*utgt/eb/n}{}
+\DeclareFontShape{JT2}{utgt}{eb}{sl}{<->ssub*utgt/eb/n}{}
+\DeclareFontShape{JT2}{utgt}{eb}{sc}{<->ssub*utgt/eb/n}{}
+
+% maru gothic, only one weight
+% 圓体，常規
+\DeclareFontFamily{JY2}{utmg}{}
+\DeclareFontFamily{JT2}{utmg}{}
+
+\DeclareFontShape{JY2}{utmg}{m}{n}{<->s*[0.924690]upmg-apr}{}
+\DeclareFontShape{JY2}{utmg}{m}{it}{<->ssub*utmg/m/n}{}
+\DeclareFontShape{JY2}{utmg}{m}{sl}{<->ssub*utmg/m/n}{}
+\DeclareFontShape{JY2}{utmg}{m}{sc}{<->ssub*utmg/m/n}{}
+\DeclareFontShape{JY2}{utmg}{l}{n}{<->ssub*utmg/m/n}{}
+\DeclareFontShape{JY2}{utmg}{bx}{n}{<->ssub*utmg/m/n}{}
+\DeclareFontShape{JY2}{utmg}{b}{n}{<->ssub*utmg/m/n}{}
+\DeclareFontShape{JT2}{utmg}{m}{n}{<->s*[0.924690]utmg-apr}{}
+\DeclareFontShape{JT2}{utmg}{m}{it}{<->ssub*utmg/m/n}{}
+\DeclareFontShape{JT2}{utmg}{m}{sl}{<->ssub*utmg/m/n}{}
+\DeclareFontShape{JT2}{utmg}{m}{sc}{<->ssub*utmg/m/n}{}
+\DeclareFontShape{JT2}{utmg}{l}{n}{<->ssub*utmg/m/n}{}
+\DeclareFontShape{JT2}{utmg}{bx}{n}{<->ssub*utmg/m/n}{}
+\DeclareFontShape{JT2}{utmg}{b}{n}{<->ssub*utmg/m/n}{}
+
+\DeclareRobustCommand\ujmgrn{\kanjifamily{utmg}\kanjiseries{m}\selectfont}
+
+\renewcommand\mcdefault{utmc}
+\renewcommand\gtdefault{utgt}
+\renewcommand\mgdefault{utmg}
+
+\renewcommand\kanjifamilydefault{\mcdefault}
+\renewcommand\kanjiseriesdefault{\mddefault}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% 自定義的字體 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% 割注字體 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 改了割注虛擬字體的配置，於是割注產生了變化。另外 TexLive2024 在竪排時，如果有 JY2 字體，可能會優先使用 JY2 ，導致豎排割注的 gluekern 失效！！如果沒有 JY2 才會使用 JT2 需要留意！！！
+% 
+% 這樣的話，當局部切換到橫排時會缺失橫排字體，如果其中有割注將產生致命錯誤！當然，沒有誰會用橫排做割注吧？如果有，到時候需要用 \ifydir \iftdir 臨時切替一下，示例如下：
+%
+\ifydir
+\DeclareFontFamily{JY2}{tsku}{}
+\DeclareFontShape{JY2}{tsku}{m}{n}{<->s*[0.924690]upmr-jun}{}
+\DeclareFontShape{JY2}{tsku}{m}{it}{<->ssub*tsku/m/n}{}
+\DeclareFontShape{JY2}{tsku}{m}{sl}{<->ssub*tsku/m/n}{}
+\DeclareFontShape{JY2}{tsku}{m}{sc}{<->ssub*tsku/m/n}{}
+\fi
+
+\DeclareFontFamily{JT2}{tsku}{}
+\DeclareFontShape{JT2}{tsku}{m}{n}{<->s*[0.924690]utmr-jun}{}
+\DeclareFontShape{JT2}{tsku}{m}{it}{<->ssub*tsku/m/n}{}
+\DeclareFontShape{JT2}{tsku}{m}{sl}{<->ssub*tsku/m/n}{}
+\DeclareFontShape{JT2}{tsku}{m}{sc}{<->ssub*tsku/m/n}{}
+
+\DeclareRobustCommand\tsku{\kanjifamily{tsku}\kanjiseries{m}\selectfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% 割注字體 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% 單行注字體 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DeclareFontFamily{JY2}{danzhu}{}
+\DeclareFontFamily{JT2}{danzhu}{}
+
+\DeclareFontShape{JY2}{danzhu}{m}{n}{<->s*[0.924690]upmr-apr}{}
+\DeclareFontShape{JY2}{danzhu}{m}{it}{<->ssub*danzhu/m/n}{}
+\DeclareFontShape{JY2}{danzhu}{m}{sl}{<->ssub*danzhu/m/n}{}
+\DeclareFontShape{JY2}{danzhu}{m}{sc}{<->ssub*danzhu/m/n}{}
+\DeclareFontShape{JY2}{danzhu}{l}{n}{<->ssub*danzhu/m/n}{}
+\DeclareFontShape{JT2}{danzhu}{m}{n}{<->s*[0.924690]utmr-jul}{}
+\DeclareFontShape{JT2}{danzhu}{m}{it}{<->ssub*danzhu/m/n}{}
+\DeclareFontShape{JT2}{danzhu}{m}{sl}{<->ssub*danzhu/m/n}{}
+\DeclareFontShape{JT2}{danzhu}{m}{sc}{<->ssub*danzhu/m/n}{}
+\DeclareFontShape{JT2}{danzhu}{l}{n}{<->ssub*danzhu/m/n}{}
+
+\DeclareRobustCommand\danzhu{\kanjifamily{danzhu}\kanjiseries{m}\selectfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% 單行注字體 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% 以下為行間標點字體配置 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% gothic regular; 黑体，常規
+\DeclareFontFamily{JY2}{zutg}{}
+\DeclareFontFamily{JT2}{zutg}{}
+
+\DeclareFontShape{JY2}{zutg}{m}{n}{<->s*[0.924690]upgr-apr}{}
+\DeclareFontShape{JY2}{zutg}{m}{it}{<->ssub*zutg/m/n}{}
+\DeclareFontShape{JY2}{zutg}{m}{sl}{<->ssub*zutg/m/n}{}
+\DeclareFontShape{JY2}{zutg}{m}{sc}{<->ssub*zutg/m/n}{}
+\DeclareFontShape{JT2}{zutg}{m}{n}{<->s*[0.924690]utgr-vert}{}
+\DeclareFontShape{JT2}{zutg}{m}{it}{<->ssub*zutg/m/n}{}
+\DeclareFontShape{JT2}{zutg}{m}{sl}{<->ssub*zutg/m/n}{}
+\DeclareFontShape{JT2}{zutg}{m}{sc}{<->ssub*zutg/m/n}{}
+
+\DeclareRobustCommand\zutgr{\kanjifamily{zutg}\kanjiseries{m}\selectfont}
+
+\DeclareFontShape{JY2}{zutg}{bx}{n}{<->s*[0.924690]upgb-apr}{}
+\DeclareFontShape{JY2}{zutg}{bx}{it}{<->ssub*zutg/bx/n}{}
+\DeclareFontShape{JY2}{zutg}{bx}{sl}{<->ssub*zutg/bx/n}{}
+\DeclareFontShape{JY2}{zutg}{bx}{sc}{<->ssub*zutg/bx/n}{}
+\DeclareFontShape{JT2}{zutg}{bx}{n}{<->s*[0.924690]utgb-vert}{}
+\DeclareFontShape{JT2}{zutg}{bx}{it}{<->ssub*zutg/bx/n}{}
+\DeclareFontShape{JT2}{zutg}{bx}{sl}{<->ssub*zutg/bx/n}{}
+\DeclareFontShape{JT2}{zutg}{bx}{sc}{<->ssub*zutg/bx/n}{}
+
+\DeclareRobustCommand\zutgb{\kanjifamily{zutg}\kanjiseries{bx}\selectfont}
+
+\DeclareFontShape{JY2}{zutg}{eb}{n}{<->s*[0.924690]upgb-apr}{}
+\DeclareFontShape{JY2}{zutg}{eb}{it}{<->ssub*zutg/eb/n}{}
+\DeclareFontShape{JY2}{zutg}{eb}{sl}{<->ssub*zutg/eb/n}{}
+\DeclareFontShape{JY2}{zutg}{eb}{sc}{<->ssub*zutg/eb/n}{}
+\DeclareFontShape{JT2}{zutg}{eb}{n}{<->s*[0.924690]utge-vert}{}
+\DeclareFontShape{JT2}{zutg}{eb}{it}{<->ssub*zutg/eb/n}{}
+\DeclareFontShape{JT2}{zutg}{eb}{sl}{<->ssub*zutg/eb/n}{}
+\DeclareFontShape{JT2}{zutg}{eb}{sc}{<->ssub*zutg/eb/n}{}
+\DeclareRobustCommand\zutge{\kanjifamily{zutg}\kanjiseries{ex}\selectfont}
+
+
+% mincho light; 明朝体，細
+\DeclareFontFamily{JY2}{zutm}{}
+\DeclareFontFamily{JT2}{zutm}{}
+
+\DeclareFontShape{JY2}{zutm}{l}{n}{<->s*[0.924690]upml-apr}{}
+\DeclareFontShape{JY2}{zutm}{l}{it}{<->ssub*zutm/l/n}{}
+\DeclareFontShape{JY2}{zutm}{l}{sl}{<->ssub*zutm/l/n}{}
+\DeclareFontShape{JY2}{zutm}{l}{sc}{<->ssub*zutm/l/n}{}
+\DeclareFontShape{JT2}{zutm}{l}{n}{<->s*[0.924690]utml-vert}{}
+\DeclareFontShape{JT2}{zutm}{l}{it}{<->ssub*zutm/l/n}{}
+\DeclareFontShape{JT2}{zutm}{l}{sl}{<->ssub*zutm/l/n}{}
+\DeclareFontShape{JT2}{zutm}{l}{sc}{<->ssub*zutm/l/n}{}
+\DeclareRobustCommand\zutml{\kanjifamily{zutm}\kanjiseries{l}\selectfont}
+
+\DeclareFontShape{JY2}{zutm}{m}{n}{<->s*[0.924690]upmr-apr}{}
+\DeclareFontShape{JY2}{zutm}{m}{it}{<->ssub*zutm/m/n}{}
+\DeclareFontShape{JY2}{zutm}{m}{sl}{<->ssub*zutm/m/n}{}
+\DeclareFontShape{JY2}{zutm}{m}{sc}{<->ssub*zutm/m/n}{}
+\DeclareFontShape{JT2}{zutm}{m}{n}{<->s*[0.924690]utmr-vert}{}
+\DeclareFontShape{JT2}{zutm}{m}{it}{<->ssub*zutm/m/n}{}
+\DeclareFontShape{JT2}{zutm}{m}{sl}{<->ssub*zutm/m/n}{}
+\DeclareFontShape{JT2}{zutm}{m}{sc}{<->ssub*zutm/m/n}{}
+\DeclareRobustCommand\zutmr{\kanjifamily{zutm}\kanjiseries{m}\selectfont}
+
+\DeclareFontShape{JY2}{zutm}{bx}{n}{<->s*[0.924690]upmb-apr}{}
+\DeclareFontShape{JY2}{zutm}{bx}{it}{<->ssub*zutm/bx/n}{}
+\DeclareFontShape{JY2}{zutm}{bx}{sl}{<->ssub*zutm/bx/n}{}
+\DeclareFontShape{JY2}{zutm}{bx}{sc}{<->ssub*zutm/bx/n}{}
+\DeclareFontShape{JT2}{zutm}{bx}{n}{<->s*[0.924690]utmb-vert}{}
+\DeclareFontShape{JT2}{zutm}{bx}{it}{<->ssub*zutm/bx/n}{}
+\DeclareFontShape{JT2}{zutm}{bx}{sl}{<->ssub*zutm/bx/n}{}
+\DeclareFontShape{JT2}{zutm}{bx}{sc}{<->ssub*zutm/bx/n}{}
+\DeclareRobustCommand\zutmb{\kanjifamily{zutm}\kanjiseries{bx}\selectfont}
+
+% MaruGothic Regular; 圓体，常規
+\DeclareFontFamily{JY2}{zutmg}{}
+\DeclareFontFamily{JT2}{zutmg}{}
+
+\DeclareFontShape{JY2}{zutmg}{m}{n}{<->s*[0.924690]upmr-apr}{}
+\DeclareFontShape{JY2}{zutmg}{m}{it}{<->ssub*zutmg/m/n}{}
+\DeclareFontShape{JY2}{zutmg}{m}{sl}{<->ssub*zutmg/m/n}{}
+\DeclareFontShape{JY2}{zutmg}{m}{sc}{<->ssub*zutmg/m/n}{}
+\DeclareFontShape{JT2}{zutmg}{m}{n}{<->s*[0.924690]utmr-apr}{}
+\DeclareFontShape{JT2}{zutmg}{m}{it}{<->ssub*zutmg/m/n}{}
+\DeclareFontShape{JT2}{zutmg}{m}{sl}{<->ssub*zutmg/m/n}{}
+\DeclareFontShape{JT2}{zutmg}{m}{sc}{<->ssub*zutmg/m/n}{}
+
+\DeclareRobustCommand\zutmg{\kanjifamily{zutmg}\kanjiseries{m}\selectfont}
+
+
+\makeatother 
+
+
+\endinput
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+【太平广记竖版】
+
+标题，基本汉字：森泽龙明体B　A-OTF-RyuminPr6N-Bold.otf
+标题，补充BMP：思源明朝韩版B　SourceHanSerifK-Bold.otf
+标题，汉字SIP：自造汉字
+
+正文，基础汉字：森泽龙明体L　A-OTF-RyuminPr6N-Light.otf
+正文，补充BMP：思源明朝韩版R　SourceHanSerifK-Regular.otf
+正文，补充SIP：中华书局宋02平面、15平面（4％抖动竖排修复变体）
+其他：自造汉字
+
+割注部分，眉批部分，同正文
+
+书眉，基础汉字：FOT－UD圆体M　FOT-UDMarugoSmallPr6N-M.otf
+书眉，补充BMP：华康圆体W5－GB18030－2000　DFYUAN5AM.ttf
+
+辅文，引用文章，基础汉字：华康楷书W5日文版　DFKaiShoPro5-W5.otf
+辅文，引用文章，补充BMP：华康楷书W5－GB18030－2000　DFKaiGBA-W5.otf
+辅文，引用文章，SIP：方正楷书S－SIP1.0四库全书版，FZKaiS(SIP)-1.0.TTF（竖排修复版）
+
+辅文，文章出处，基础汉字：森泽正楷书R　A-OTF-SeiKaiCB1Pr5-Regular.otf
+辅文，文章出处，补充BMP：华康楷书W5－GB18030－2000　DFKaiGBA-W5.otf
+辅文，文章出处，SIP：自造汉字
+
+注标号：fontworks筑紫明朝旧字形A版L字重　FOT-TsukuAOldMinPr6N-L.otf
+
+【红楼梦竖版】
+
+标题，基本汉字：森泽龙明体B　A-OTF-RyuminPr6N-Bold.otf
+标题，补充BMP：思源明朝韩版B　SourceHanSerifK-Bold.otf
+标题，汉字SIP：无
+
+正文，基础汉字：fontworks筑紫明朝旧字形A版R字重　FOT-TsukuAOldMinPr6N-R.otf
+正文，补充BMP：思源明朝韩版R　SourceHanSerifK-Regular.otf
+正文，补充SIP：中华书局宋02平面、15平面（4％抖动竖排修复变体）
+正文，其他：自造（拼一下）
+
+割注、尾注、眉批，同正文
+
+行间注，基础汉字：FOT－UD圆体M　FOT-UDMarugoSmallPr6N-M.otf
+行间注，补充BMP：华康圆体W5－GB18030－2000　DFYUAN5AM.ttf
+行间注，补充SIP：方正楷书S－SIP1.0四库全书版，FZKaiS(SIP)-1.0.TTF（竖排修复版）
+行间注，标点符号：森泽UD新圆体R字重　A-OTF-UDShinMGoPr6N-Regular.otf
+
+辅文，引用文章，基础汉字：森泽正楷书R　A-OTF-SeiKaiCB1Pr5-Regular.otf
+辅文，引用文章，补充BMP：方正北魏楷书－GB18030－2000　FZBWKSGBX.OTF
+辅文，引用文章，SIP：方正楷书S－SIP1.0四库全书版，FZKaiS(SIP)-1.0.TTF（竖排修复版）
+
+卷前标，基础汉字：华康楷书W7日文版　DFKaiShoPro5-W7.otf
+
+注标号：fontworks筑紫明朝旧字形A版L字重　FOT-TsukuAOldMinPr6N-L.otf
+
+书眉，基础汉字：FOT－UD圆体M　FOT-UDMarugoSmallPr6N-M.otf
+书眉，补充BMP：华康圆体W5－GB18030－2000　DFYUAN5AM.ttf
+
+封面：日活字体－花蝴蝶　RAHanaBotanStdDB.otf
+
+其他：HOT－篆书　HOT-SyotenStd-L.otf
+其他：HOT－篆书M　HOT-TenshoStd-M.otf
+

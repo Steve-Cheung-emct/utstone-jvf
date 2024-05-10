@@ -131,15 +131,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%% 割注字體 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 改了割注虛擬字體的配置，於是割注產生了變化。另外 TexLive2024 在竪排時，如果有 JY2 字體，可能會優先使用 JY2 ，導致豎排割注的 gluekern 失效！！如果沒有 JY2 才會使用 JT2 需要留意！！！
 % 
-% 這樣的話，當局部切換到橫排時會缺失橫排字體，如果其中有割注將產生致命錯誤！當然，沒有誰會用橫排做割注吧？如果有，到時候需要用 \ifydir \iftdir 臨時切替一下，示例如下：
 %
-\ifydir
 \DeclareFontFamily{JY2}{tsku}{}
 \DeclareFontShape{JY2}{tsku}{m}{n}{<->s*[0.924690]upmr-jun}{}
 \DeclareFontShape{JY2}{tsku}{m}{it}{<->ssub*tsku/m/n}{}
 \DeclareFontShape{JY2}{tsku}{m}{sl}{<->ssub*tsku/m/n}{}
 \DeclareFontShape{JY2}{tsku}{m}{sc}{<->ssub*tsku/m/n}{}
-\fi
 
 \DeclareFontFamily{JT2}{tsku}{}
 \DeclareFontShape{JT2}{tsku}{m}{n}{<->s*[0.924690]utmr-jun}{}
